@@ -1,0 +1,60 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 1fr repeat(3,0.5fr);
+    grid-template-rows: 0.1fr 1fr;
+    max-width: 900px;
+    width: 70%;
+    height: 50vh;
+    grid-auto-flow: row;
+}
+
+
+
+.pac, .titoli{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.pac{
+    align-items: center;
+}
+
+.titoli h4{
+    height: 25px;
+}
+
+.pac-nome{
+
+    display: flex;
+}
+
+h3{
+    font-size: 18px;
+    text-align: center;
+    grid-column-start: calc(var(--pos)-1);
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-end: var(--pos);
+}
+
+.pac{
+    grid-column-start: calc(var(--pos)-1);
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-end: var(--pos);
+}
+
+.titoli{
+    grid-column-start: 1;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-end: 2;
+}

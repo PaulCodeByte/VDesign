@@ -1,0 +1,87 @@
+footer{
+    background-color: #000;
+}
+
+/* ! COVER */
+
+.cover-img{
+    height: 110vh;
+}
+
+.cover-title{
+    font-family: Kanit;
+    margin-bottom: 2rem;
+}
+
+.cover-sub{
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.txt{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (max-width:800px) {
+    .cover-img .cover-title{
+        font-size: 2.5rem;
+        text-align: start;
+    }
+}
+
+/* ! CONSULENZA - AGGIORNAMENTO - DESIGN - CREAZIONE - HOSTING */
+
+.proc-grid{
+    min-height: 80vh;
+    max-width: 100%;
+    gap: 5%;
+}
+
+.proc-grid .col-60 {
+    align-items: center;
+    flex-direction: column;
+    gap: 4vh;
+}
+
+.proc-grid .col-40 {
+    align-items: center;
+    flex-direction: column;
+}
+
+.proc-grid h2{
+    text-align: center;
+}
+
+.proc-grid .col-60 p{
+    max-width: 600px;
+    width: 100%;
+}
+
+.proc-grid img{
+    max-width: 350px;
+    border-radius: 20px;
+    max-height: 350px;
+    height: auto;
+    object-fit: cover;
+    box-shadow: rgba(156, 156, 156, 0.3) 0px 10px 20px, rgba(156, 156, 156, 0.3) 0px 6px 6px;
+    aspect-ratio: 1/1;
+    width: 100%;
+}
+
+
+@media (max-width:800px){
+    .proc-grid{
+        gap: 5vh;
+    }
+
+    .proc-grid img{
+        max-width: 250px;
+        height: 250px;
+    }
+
+    .proc-grid p, .proc-grid h2{
+        padding: 0 5%;
+    }
+}

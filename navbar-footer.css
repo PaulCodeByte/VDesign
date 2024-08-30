@@ -1,0 +1,225 @@
+/* ! Header / Navbar */
+
+header{
+    width: 100%;
+    height: 10vh;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 10% 10px 10%;
+    align-items: center;
+    z-index: 100;
+    top: 0;
+    backdrop-filter: blur(3px);
+}
+
+.logo{
+    max-width: 50px;
+    max-height: 50px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.links{list-style: none}
+
+.link{
+    display: inline;
+    margin: 0 35px 0 0;
+    position: relative;
+}
+
+.link a{transition: all 0.3s ease; font-weight: 200;}
+
+.link a:hover{color:#d3be00;}
+
+.logo:hover{scale: 1.1;}
+
+.text, .anim{display: none;}
+
+.hamburger{
+    width: 25px;
+    display: none;
+}
+
+.hamburger span{
+    height: 3px;
+    background-color: white;
+    width: 100%;
+    border-radius: 3px;
+    display: block;
+    margin-top: 5px;
+}
+
+@media (max-width:800px) {
+
+    .hamburger{
+        display: block;
+        position: absolute;
+        top: 25px;
+        right: 10px;
+        z-index: 100;
+    }
+
+    .text, .anim{
+        color: #fff;
+        position: absolute;
+        z-index: 102;
+        transition: all 0.3s ease;
+        display: block;
+        font-weight: 700;
+        font-size: 25px;
+        left: -100%;
+    }
+
+    .anim.show{left:+30px;}
+
+    .text.show{left:50%;transform: translateX(-50%);}
+
+    header .button{display: none;}
+
+    .links{
+        position: fixed;
+        background-color: #757575;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: -100%;
+        padding-top: 100px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+        z-index: 100;
+        transition: all 0.3s ease;
+    }
+
+    .link{display: block;}
+
+    .link a{font-size: 20px;}
+
+    .show{left:0;}
+
+    .princ{margin-right: auto;display: block;}
+
+    .princ.show{transform: translateY(-300%);transition: all 0.3s ease;      }
+}
+
+.selected::after{
+    content: "";
+    width: 100%;
+    height: .2em;
+    
+    background: #d3be00;
+    
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+}
+
+.hover {
+    position: relative;
+    color: #fff;
+    transition: all .35s ease;
+
+    &::before {
+        content: ""; 
+        position: absolute;
+        width: 100%;
+        height: .2em;
+        bottom: -10px;
+        left: 0;
+        background-color:#d3be00;
+        visibility: hidden;
+        transform: scaleX(0);
+        transition: all 0.3s ease-in-out 0s; 
+    }   
+
+    &:hover {
+        &::before {
+            visibility: visible;
+            transform: scaleX(1);
+        }   
+    }   
+}
+
+/* ! Footer */
+
+.big-txt{
+    font-size: 2.5rem;
+    position: relative;
+}
+
+.title-txt{
+    font-size: 1.35rem;
+    text-transform:uppercase ;
+    position: relative;
+    margin-bottom: 10px;
+    width: fit-content;
+}
+
+.title-txt::after{
+    content: "";
+    width: 100%;
+    height: .15rem;
+    
+    background: #d3be00;
+    
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+}
+
+.info-txt{font-size: 0.95rem;color: #bbbbbb;}
+
+footer{background-color: #bbb;}
+
+footer .grid{
+    background-color: #757575;
+    width: 100%;
+    height: auto;
+    border-radius: 30px 30px 0 0;
+}
+
+footer .col-25{height: 40vh;}
+
+footer .foot-tit{
+    align-items: center;
+    padding-left: 60px;
+    font-family: Kanit, serif;
+}
+
+footer .info{
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+    justify-content: start;
+    padding-top: 50px;
+}
+
+.container{width: 50%; display: flex; flex-direction: row;}
+
+footer a{width: fit-content;}
+
+@media (max-width:800px) {
+    footer{height: fit-content;width: 100%;}
+
+    footer .grid{flex-direction: row;align-items: center;}
+
+    footer .grid{
+        justify-content: center;
+        flex-direction: column;
+        gap: 37px;
+        width: 100%;
+        height: auto;
+        align-items: center;
+        padding: 25px 0;
+    }
+
+    footer .col-25.foot-tit{display: none;}
+
+    footer .col-25.info{
+        width: 100%;
+        height: auto;
+        padding: 0;
+    }
+}

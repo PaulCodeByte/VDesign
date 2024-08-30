@@ -1,0 +1,40 @@
+.icon{
+    font-size: 4rem
+}
+
+footer{
+    background-color: #000;
+}
+
+/* ! CONTATTI */
+.cont-grid{
+    min-height: 80vh;
+}
+
+.col-33{
+    align-items: center;
+    flex-direction: column;
+    padding: 10vh;
+    gap: 10px;
+    justify-content: center;
+}
+
+.cont-grid a{
+    font-size: 1rem;
+    transition: all 0.3s ease; 
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.cont-grid a:hover {
+    transform: scale(1.2);
+}
+
+@media (max-width:800px) {
+    .cont-grid a:hover {
+        transform: scale(1);
+    }
+}

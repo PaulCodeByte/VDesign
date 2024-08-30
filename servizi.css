@@ -1,0 +1,142 @@
+
+main, footer{
+    background-color: #000;
+}
+
+/* ! COVER */
+
+.cover-img{
+    height: 110vh;
+}
+
+.cover-title{
+    font-family: Inter;
+    margin-bottom: 2rem;
+}
+
+.cover-sub{
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.txt{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (max-width:800px) {
+    .cover-img .cover-title{
+        font-size: 2.5rem;
+        text-align: start;
+    }
+}
+
+
+/* ! PRICING CARD */
+
+.pri-grid{
+    background-color: #bbbbbb;
+    padding: 15vh;
+    gap: 50px;
+}
+
+.pri-grid .col-33{
+    flex-direction: column;
+    border-radius: 20px;
+    align-items: center;
+    height: 70vh;
+    justify-content: space-between;
+    padding: 5vh 5%;
+    box-shadow: rgba(0, 0, 0, 0.30) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.pri-grid .col-33:hover{scale: 1.1;}
+
+.base{background-color: #303030;}
+
+.pro{background-color: #757575;}
+
+.elite{background-color: #555555;}
+
+@media (max-width:800px){
+
+    .pri-grid{padding: 10vh 10%;}
+
+    .pri-grid .col-33{height: 55vh;}
+
+    .pri-grid .col-33:hover{scale:1;}
+}
+
+/* ! COMPARA */
+
+.comp-container{
+    display: grid;
+    grid-template-columns: 1fr repeat(3,0.5fr);
+    grid-template-rows: 0.1fr 1fr;
+    max-width: 900px;
+    width: 50%;
+    height: 50vh;
+    grid-auto-flow: row;
+}
+
+
+
+.pac, .titoli{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.pac{
+    align-items: center;
+}
+
+.titoli h4{
+    height: 25px;
+}
+
+.pac-nome{
+
+    display: flex;
+}
+
+.compara h3{
+    font-size: 18px;
+    text-align: center;
+    grid-column-start: calc(var(--pos)-1);
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-end: var(--pos);
+}
+
+.pac{
+    grid-column-start: calc(var(--pos)-1);
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-end: var(--pos);
+}
+
+.titoli{
+    grid-column-start: 1;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-end: 2;
+}
+
+.compara{
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    padding: 5vh 5%;
+    height: 80vh;
+    justify-content: center;
+}
+
+@media (max-width:800px){
+    .comp-container{
+        width: 100%;
+    }
+}
